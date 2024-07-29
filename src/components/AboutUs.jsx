@@ -21,7 +21,7 @@ function AboutUs() {
           trigger: AboutUsWrapperDiv.current,
           start: "top 300",
           end:"+=300",
-          scrub: 1,
+          scrub: 2,
         },
       }
     );
@@ -48,7 +48,7 @@ function AboutUs() {
       className="AboutUsWrapperDiv flex flex-col px-[6vw] xl:px-24 lg:pt-28 pt-10 min-h-[100vh]"
     >
       <h2
-        className="font-sans font-extrabold text-[2rem] sm:text-[2.5rem] lg:text-[3vw] 2xl:text-[5vw] tracking-wide sm:mb-12 md:mb-8 text-center md:text-left bg-white w-fit pr-7 pl-3"
+        className="translate-x-[-150%] font-sans font-extrabold text-[2rem] sm:text-[2.5rem] lg:text-[3vw] 2xl:text-[5vw] tracking-wide sm:mb-12 md:mb-8 text-center md:text-left bg-white w-fit pr-7 pl-3"
         style={{ clipPath: "polygon(0 0, 100% 0, 90% 100%, 0% 100%)" }}
         ref={headingRef}
       >

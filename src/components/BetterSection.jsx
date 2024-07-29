@@ -18,7 +18,7 @@ function BetterSection() {
       henEggRef.current,
       { transform: "translateY(0rem)" },
       {
-        transform: "translateY(-2rem)",
+        transform: "translateY(-6rem)",
         scrollTrigger: {
           trigger: henEggRef.current,
           start: "top center",
@@ -32,7 +32,7 @@ function BetterSection() {
       featherImgRef.current,
       { transform: "translateY(0rem)" },
       {
-        transform: "translateY(2rem)",
+        transform: "translateY(6rem)",
         scrollTrigger: {
           trigger: featherImgRef.current,
           start: "top center",
@@ -46,7 +46,7 @@ function BetterSection() {
       henEggMobileRef.current,
       { transform: "translateY(0rem)" },
       {
-        transform: "translateY(-6rem)",
+        transform: "translateY(-3rem)",
         scrollTrigger: {
           trigger: henEggMobileRef.current,
           start: "top center",
@@ -60,7 +60,7 @@ function BetterSection() {
       featherImgMobileRef.current,
       { transform: "translateY(0rem)" },
       {
-        transform: "translateY(6rem)",
+        transform: "translateY(3rem)",
         scrollTrigger: {
           trigger: featherImgMobileRef.current,
           start: "top center",
