@@ -207,11 +207,23 @@ html,body{
       animation-range-end:100vh;
     }
     @keyframes benifitsSectionWrapperDivTransform {
-      from {
-        padding-top: 6rem;
+      0% {
+        padding-top: 5rem;
       }
-      to {
-        padding-top: 0;
+      20%{
+        padding-top: 4rem;
+      }
+      40% {
+        padding-top: 3rem;
+      }
+      60% {
+        padding-top: 2rem;
+      }
+      80% {
+        padding-top: 1rem;
+      }
+      100% {
+        padding-top: 0rem;
       }
     }
     /* benifitsSectionDiv */
