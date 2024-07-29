@@ -52,7 +52,6 @@ function BetterSection() {
           trigger: BetterSectionWrapperDiv.current,
           start: "top top",
           end: "+=500",
-          markers: true,
           scrub: 2,
         },
       }
