@@ -15,15 +15,91 @@ gsap.registerPlugin(ScrollTrigger);
 function BenefitsSection() {
   useEffect(() => {
     const element = document.querySelector(".benifitsSectionDiv");
+    const benifitsSectionWrapperDiv = document.querySelector(
+      ".benifitsSectionWrapperDiv"
+    );
+    const BENEFITS_heading = document.querySelector(".BENEFITS_heading");
+    const benifit_egg = document.querySelector(".benifit_egg");
+    const benefits_left_img = document.querySelector(".benefits_left_img");
+    const benefits_right_img = document.querySelector(".benefits_right_img");
     gsap.fromTo(
       element,
       { borderRadius: "30% 30% 0 0" },
       {
         borderRadius: "0% 0% 0% 0%",
         scrollTrigger: {
-          trigger: element,
+          trigger: benifitsSectionWrapperDiv,
           start: "top bottom",
-          end:"top 6rem",
+          end: "top top",
+          scrub: 2,
+        },
+      }
+    );
+    gsap.fromTo(
+      benifitsSectionWrapperDiv,
+      { paddingTop: "6rem" },
+      {
+        paddingTop: "0rem",
+        scrollTrigger: {
+          trigger: benifitsSectionWrapperDiv,
+          start: "top bottom",
+          end: "top top",
+          scrub: 2,
+        },
+      }
+    );
+    gsap.fromTo(
+      BENEFITS_heading,
+      { scale: 0.2, opacity: 0.5 },
+      {
+        scale: 1,
+        opacity: 1,
+        scrollTrigger: {
+          trigger: benifitsSectionWrapperDiv,
+          start: "top bottom",
+          end: "top top",
+          scrub: 2,
+        },
+      }
+    );
+    gsap.fromTo(
+      benifit_egg,
+      { transform: "translateY(6rem)", opacity: 0.5 },
+      {
+        transform: "translateY(0rem)",
+        opacity: 1,
+        scrollTrigger: {
+          trigger: benifit_egg,
+          start: "top bottom",
+          end: "top 300",
+          scrub: 2,
+        },
+      }
+    );
+    gsap.fromTo(
+      benefits_left_img,
+      { transform: "translateX(-100px)", opacity: 0.4 },
+      {
+        transform: "translateX(0px)",
+        opacity: 1,
+        scrollTrigger: {
+          trigger: benifit_egg,
+          start: "top bottom",
+          end: "top 300",
+          scrub: 2,
+        },
+      }
+    );
+    gsap.fromTo(
+      benefits_right_img,
+      { transform: "translateX(100px)", opacity: 0.4 },
+      {
+        transform: "translateX(0px)",
+        opacity: 1,
+        scrollTrigger: {
+          trigger: benifit_egg,
+          start: "top bottom",
+          end: "top 300",
           scrub: 2,
         },
       }
@@ -39,13 +115,13 @@ function BenefitsSection() {
     >
       <div className="benifitsSectionDiv flex flex-col justify-center items-center w-full bg-[#d6f268] pt-16 pb-24 rounded-t-[30%]">
         <div className="relative flex items-center justify-center">
-          <h2 className="BENEFITS_heading text-[9vw] font-lora font-[900] text-center text-[#042F1A]">
+          <h2 className="BENEFITS_heading text-[9vw] font-lora font-[900] text-center text-[#042F1A] scale-[0.2] opacity-[0.5]">
             BENEFITS
           </h2>
         </div>
 
         <div className="flex justify-center">
-          <div className="pt-16 benefits_left_img">
+          <div className="pt-16 benefits_left_img translate-x-[-100px] opacity-[0.4]">
             <img
               src={isMobile ? benifits_mobile_left : benefits_left}
               alt=""
@@ -57,10 +133,10 @@ function BenefitsSection() {
             <img
               src={benefit_egg}
               alt=""
-              className="benifit_egg absolute w-[20vw]"
+              className="benifit_egg absolute w-[20vw] translate-y-[6rem] opacity-[0.5]"
             />
           </div>
-          <div className="pt-16 benefits_right_img">
+          <div className="pt-16 benefits_right_img translate-x-[100px] opacity-[0.4]">
             <img
               src={isMobile ? benifits_mobile_right : benefits_right}
               alt=""
