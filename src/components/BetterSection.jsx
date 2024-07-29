@@ -12,6 +12,7 @@ function BetterSection() {
   const featherImgRef = useRef(null);
   const henEggMobileRef = useRef(null);
   const featherImgMobileRef = useRef(null);
+  const BetterSectionWrapperDiv = useRef(null);
 
   useEffect(() => {
     gsap.fromTo(
@@ -46,11 +47,11 @@ function BetterSection() {
       henEggMobileRef.current,
       { transform: "translateY(0rem)" },
       {
-        transform: "translateY(-3rem)",
+        transform: "translateY(-4rem)",
         scrollTrigger: {
-          trigger: henEggMobileRef.current,
-          start: "top center",
-          end: "bottom top",
+          trigger: BetterSectionWrapperDiv.current,
+          start: "top top",
+          end: "+=400",
           scrub: 2,
         },
       }
@@ -60,11 +61,11 @@ function BetterSection() {
       featherImgMobileRef.current,
       { transform: "translateY(0rem)" },
       {
-        transform: "translateY(3rem)",
+        transform: "translateY(4rem)",
         scrollTrigger: {
-          trigger: featherImgMobileRef.current,
-          start: "top center",
-          end: "bottom top",
+          trigger: BetterSectionWrapperDiv.current,
+          start: "top top",
+          end: "+=400",
           scrub: 2,
         },
       }
@@ -73,6 +74,7 @@ function BetterSection() {
 
   return (
     <div
+      ref={BetterSectionWrapperDiv}
       className="w-full  bg-repeat"
       style={{ backgroundImage: `url(${bg_orange})` }}
     >
