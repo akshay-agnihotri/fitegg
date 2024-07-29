@@ -11,7 +11,7 @@ function BenefitsSection() {
   const isMobile = useMediaQuery({ query: "(max-width: 640px)" });
 
   return (
-    <div id="benefit" className="benifitsSectionWrapperDiv bg-[#FFF6F6]">
+    <div id="benefit" className="benifitsSectionWrapperDiv bg-[#FFF6F6] pt-[6rem] overflow-hidden">
       <div className="benifitsSectionDiv flex flex-col justify-center items-center w-full bg-[#d6f268] pt-16 pb-24">
         <div className="relative flex items-center justify-center">
           <h2 className="BENEFITS_heading text-[9vw] font-lora font-[900] text-center text-[#042F1A]">

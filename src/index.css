@@ -189,10 +189,10 @@
   @media (prefers-reduced-motion: no-preference) {
     /* benifitsSectionDiv */
     .benifitsSectionWrapperDiv {
-      animation: benifitsSectionWrapperDivTransform linear forwards;
+      animation: benifitsSectionWrapperDivTransform ease-in-out forwards;
       animation-timeline: view();
-      animation-range-start: 0px;
-      animation-range-end: calc(100vh);
+      animation-range-start: 0vh;
+      animation-range-end:100vh;
     }
     @keyframes benifitsSectionWrapperDivTransform {
       from {
@@ -204,10 +204,10 @@
     }
     /* benifitsSectionDiv */
     .benifitsSectionDiv {
-      animation: benifitsSectionDivTransform linear forwards;
+      animation: benifitsSectionDivTransform ease-in-out forwards;
       animation-timeline: view();
-      animation-range-start: 0px;
-      animation-range-end: calc(100vh);
+      animation-range-start: 0vh;
+      animation-range-end:100vh;
     }
     @keyframes benifitsSectionDivTransform {
       from {
