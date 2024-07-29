@@ -51,7 +51,8 @@ function BetterSection() {
         scrollTrigger: {
           trigger: BetterSectionWrapperDiv.current,
           start: "top top",
-          end: "+=400",
+          end: "+=500",
+          markers: true,
           scrub: 2,
         },
       }
@@ -65,7 +66,7 @@ function BetterSection() {
         scrollTrigger: {
           trigger: BetterSectionWrapperDiv.current,
           start: "top top",
-          end: "+=400",
+          end: "+=500",
           scrub: 2,
         },
       }
