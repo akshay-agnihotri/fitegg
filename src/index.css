@@ -227,7 +227,7 @@ html,body{
       }
     }
     /* benifitsSectionDiv */
-    .benifitsSectionDiv {
+    /* .benifitsSectionDiv {
       animation: benifitsSectionDivTransform ease-in-out forwards;
       animation-timeline: view();
       animation-range-start: 0vh;
@@ -240,7 +240,7 @@ html,body{
       to {
         border-radius: 0 0 0 0;
       }
-    }
+    } */
 
     /* BENEFITS_heading */
     .BENEFITS_heading {

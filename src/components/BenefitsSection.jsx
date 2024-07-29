@@ -6,12 +6,37 @@ import benefit_egg from "../assets/benefit-egg.png";
 import benifits_mobile_left from "../assets/benefit-mobile-left.png";
 import benifits_mobile_right from "../assets/benefit-mobile-right.png";
 import { HashLink } from "react-router-hash-link";
+import { useEffect } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 function BenefitsSection() {
+  useEffect(() => {
+    const element = document.querySelector(".benifitsSectionDiv");
+    gsap.fromTo(
+      element,
+      { borderRadius: "30% 30% 0 0" },
+      {
+        borderRadius: "0% 0% 0% 0%",
+        scrollTrigger: {
+          trigger: element,
+          start: "top bottom",
+          end:"top 6rem",
+          scrub: 2,
+        },
+      }
+    );
+  }, []);
+
   const isMobile = useMediaQuery({ query: "(max-width: 640px)" });
 
   return (
-    <div id="benefit" className="benifitsSectionWrapperDiv bg-[#FFF6F6] pt-[6rem]">
+    <div
+      id="benefit"
+      className="benifitsSectionWrapperDiv bg-[#FFF6F6] pt-[6rem]"
+    >
       <div className="benifitsSectionDiv flex flex-col justify-center items-center w-full bg-[#d6f268] pt-16 pb-24 rounded-t-[30%]">
         <div className="relative flex items-center justify-center">
           <h2 className="BENEFITS_heading text-[9vw] font-lora font-[900] text-center text-[#042F1A]">
